@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.0.2.RELEASE</version>
+		<version>1.5.22.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
     <build>
@@ -41,12 +41,6 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${com.google.guava.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.google.code.findbugs</groupId>
-                    <artifactId>jsr305</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <!-- == End Google == -->
 
@@ -54,18 +48,10 @@
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
-            <version>${commons-beanutils.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>commons-logging</artifactId>
-                    <groupId>commons-logging</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
-            <version>${commons-collections.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -95,15 +81,7 @@
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>jcl-over-slf4j</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -127,10 +105,6 @@
                 <exclusion>
                     <groupId>org.hibernate</groupId>
                     <artifactId>hibernate-entitymanager</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
                 </exclusion>
                 <exclusion>
                     <groupId>org.joda</groupId>
@@ -213,17 +187,6 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-commons</artifactId>
-            <version>${org.springframework.data.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-beanss</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-                <exclusion>
-                    <groupId>junit</groupId>
-                    <artifactId>junit-dep</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <!-- Spring Security -->
@@ -234,7 +197,6 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
-			<version>${spring-security.version}</version>
 		</dependency>
 
         <!-- Spring Test -->
@@ -243,6 +205,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+		</dependency>
         <!-- == End Spring == -->
 
         <!-- == Begin Tiles == -->
@@ -250,16 +216,6 @@
             <groupId>org.apache.tiles</groupId>
             <artifactId>tiles-core</artifactId>
             <version>${org.apache.tiles.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>commons-logging</artifactId>
-                    <groupId>commons-logging</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>jcl-over-slf4j</artifactId>
-                    <groupId>org.slf4j</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.tiles</groupId>
@@ -355,8 +311,6 @@
         <!-- == Google == -->
         <com.google.guava.version>14.0.1</com.google.guava.version>
         <!-- == Apache Commons == -->
-        <commons-beanutils.version>1.8.3</commons-beanutils.version>
-        <commons-collections.version>3.2.1</commons-collections.version>
         <commons-io.version>2.4</commons-io.version>
         <commons-lang.version>3.1</commons-lang.version>
         <!-- == Dozer== -->
@@ -373,10 +327,6 @@
         <javax.validation.version>1.0.0.Final</javax.validation.version>
         <!-- == Logging == -->
         <org.lazyluke.version>0.2.6</org.lazyluke.version>
-        <!-- == Spring Framework == -->
-        <spring.version>3.2.3.RELEASE</spring.version>
-        <spring-security.version>3.1.4.RELEASE</spring-security.version>
-        <org.springframework.data.version>1.5.1.RELEASE</org.springframework.data.version>
         <!-- == Tiles == -->
         <org.apache.tiles.version>2.2.2</org.apache.tiles.version>
         <!-- == Amateras == -->

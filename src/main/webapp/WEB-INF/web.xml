@@ -63,6 +63,10 @@
         <servlet-name>appServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
+            <param-name>throwExceptionIfNoHandlerFound</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath*:META-INF/spring/spring-mvc.xml</param-value>
         </init-param>
@@ -73,12 +77,4 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <error-page>
-        <error-code>404</error-code>
-        <location>/WEB-INF/views/notFoundError.jsp</location>
-    </error-page>
-    <error-page>
-        <error-code>500</error-code>
-        <location>/WEB-INF/views/systemError.jsp</location>
-    </error-page>
-</web-app>
+ </web-app>
